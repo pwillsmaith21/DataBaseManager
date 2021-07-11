@@ -21,3 +21,4 @@ C:\Users\HP\source\repos\DataBaseManager\DataBaseManager\obj\Debug\netcoreapp3.1
 C:\Users\HP\source\repos\DataBaseManager\DataBaseManager\obj\Debug\netcoreapp3.1\DataBaseManager.pdb
 C:\Users\HP\source\repos\DataBaseManager\DataBaseManager\obj\Debug\netcoreapp3.1\DataBaseManager.genruntimeconfig.cache
 C:\Users\HP\source\repos\DataBaseManager\DataBaseManager\obj\Debug\netcoreapp3.1\DataBaseManager.Form2.resources
+C:\Users\HP\source\repos\DataBaseManager\DataBaseManager\obj\Debug\netcoreapp3.1\DataBaseManager.InsertData.resources

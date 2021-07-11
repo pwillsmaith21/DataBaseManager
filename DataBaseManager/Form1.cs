@@ -13,8 +13,10 @@ namespace DataBaseManager
     public partial class Form1 : Form 
     {
         public static Database data = new Database();
+        public string table;
         public Form1()
         {
+            this.table = string.Empty;
             InitializeComponent();
             AddtabletoList();
         }
@@ -27,8 +29,10 @@ namespace DataBaseManager
         }
         private void Connect_Click(object sender, EventArgs e)
         {
+
+            this.table = tableOption.SelectedItem.ToString();
             data.ConnectToDataBase();
-            Form2 form = new Form2(data);
+            Form2 form = new Form2(data,table);
             Hide();
             form.Show();
 
@@ -38,14 +42,6 @@ namespace DataBaseManager
         {
 
         }
-
-        //private void Insert_Click(object sender, EventArgs e)
-        //{
-        //    if( firstnameInput.Text != null && lastnameInput.Text != null && professionInput != null)
-        //    {
-        //        data.InsertData(firstnameInput.Text, lastnameInput.Text, professionInput.Text );
-        //    }
-        //}
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
