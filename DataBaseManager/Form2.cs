@@ -35,14 +35,15 @@ namespace DataBaseManager
         private void insertData_Click(object sender, EventArgs e)
         {
             InsertData form = new InsertData(data, table);
+            Hide();
             form.Show();
-            AddDataTolist();
-
+            Show();
+            
         }
 
         private void dataBox_DoubleClick(object sender, EventArgs e)
         {
-            int index = dataBox.SelectedItem.ToString().ToCharArray()[0]-48;
+            int index = (int)Char.GetNumericValue(dataBox.SelectedItem.ToString()[0]);// need to fix temporary solution
             data.deleteItem(index, table);
             AddDataTolist();
         }
