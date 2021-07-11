@@ -1,0 +1,13 @@
+﻿Connect to database function ✓
+connect to database button✓
+insert data into data base✓
+validate field to remove duplicate 
+navigate through different form
+create new data  function 
+create new database button 
+load database method 
+load data base method
+create new table 
+create new table button given a list of parameter
+extra:
+load table from database automatically
