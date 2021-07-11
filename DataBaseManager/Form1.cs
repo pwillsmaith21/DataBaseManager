@@ -28,7 +28,7 @@ namespace DataBaseManager
         private void Connect_Click(object sender, EventArgs e)
         {
             data.ConnectToDataBase();
-            Form2 form = new Form2();
+            Form2 form = new Form2(data);
             Hide();
             form.Show();
 

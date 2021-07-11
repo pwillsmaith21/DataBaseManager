@@ -29,19 +29,28 @@ namespace DataBaseManager
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // dataBox
+            // 
+            this.dataBox.FormattingEnabled = true;
+            this.dataBox.ItemHeight = 20;
+            this.dataBox.Location = new System.Drawing.Point(27, 43);
+            this.dataBox.Name = "dataBox";
+            this.dataBox.Size = new System.Drawing.Size(669, 324);
+            this.dataBox.TabIndex = 0;
+            this.dataBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Location = new System.Drawing.Point(333, 185);
+            this.label1.Location = new System.Drawing.Point(354, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "To be implimented";
-            this.label1.UseCompatibleTextRendering = true;
+            this.label1.Size = new System.Drawing.Size(41, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Data";
             // 
             // Form2
             // 
@@ -49,6 +58,7 @@ namespace DataBaseManager
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataBox);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -58,6 +68,7 @@ namespace DataBaseManager
 
         #endregion
 
+        private System.Windows.Forms.ListBox dataBox;
         private System.Windows.Forms.Label label1;
     }
 }

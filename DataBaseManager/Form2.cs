@@ -10,9 +10,27 @@ namespace DataBaseManager
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Database data;
+        public Form2(Database data)
         {
+            this.data = data;
             InitializeComponent();
+            AddDataTolist();
+        }
+        public void AddDataTolist()
+        {
+            List<string> dataList = data.DisplayData();
+            //for( int i = 0; i < sb.Length; i++)
+            //{
+            //    dataBox.Items.Add(sb[i].ToString());
+            //}
+            dataBox.DataSource = dataList;
+
+
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

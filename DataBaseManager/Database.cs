@@ -24,7 +24,7 @@ namespace DataBaseManager
                 dWriter.InsertCommand = new SqlCommand(query, connection);
                 dWriter.InsertCommand.ExecuteNonQuery();
             }
-            catch (System.IndexOutOfRangeException e)
+            catch (System.Data.SyntaxErrorException e)
             {
                 return false;
             }
@@ -37,19 +37,18 @@ namespace DataBaseManager
 
 
         }
-        public string DisplayData()
+        public List<string> DisplayData()
         {
             string query = (" select * from person");
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader dreader = command.ExecuteReader();
-            StringBuilder sb = new StringBuilder();
-        while( dreader.NextResult() != null)
+            List<string> dataList = new List<string>();
+            while(dreader.Read())
             {
-                dreader.Read();
-                sb.Append(dreader.NextResult().ToString());
-                
+                dataList.Add($"Firstname: {dreader[0]} Lastname: { dreader[1]} Profession: { dreader[2]}");
+
             }
-            return sb.ToString();
+            return dataList;
                 }
     }
 }
