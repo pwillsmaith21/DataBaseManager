@@ -35,9 +35,9 @@ namespace DataBaseManager
         private void insertData_Click(object sender, EventArgs e)
         {
             InsertData form = new InsertData(data, table);
-            Hide();
             form.Show();
-            
+            AddDataTolist();
+
         }
 
         private void dataBox_DoubleClick(object sender, EventArgs e)
