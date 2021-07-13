@@ -31,7 +31,6 @@ namespace DataBaseManager
         private void insertData_Click(object sender, EventArgs e)
         {
             InsertData form = new InsertData(data, table);
-            Hide();
             form.Show();
             
         }
@@ -44,3 +43,4 @@ namespace DataBaseManager
         }
     }
 }
+// 

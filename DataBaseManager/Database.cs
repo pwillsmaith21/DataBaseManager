@@ -37,7 +37,7 @@ namespace DataBaseManager
             using (var connection = new SqlConnection(Helper.CnnVal("testData")))
             {
                 Console.WriteLine(index);
-                string query = $"Delete from person where ID = {index}";
+                string query = $"Exec deleteItem @id = {index}";
                 Console.WriteLine(connection.Execute(query));
             }        
         }
