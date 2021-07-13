@@ -14,7 +14,7 @@ namespace DataBaseManager
             {
                 try
                 {
-                    string query = ($@"Insert into {table} values('{firstname}','{lastname}', '{profession}')  ");
+                    string query = ($@"Exec insertValues @firstname = '{firstname}', @lastname = '{lastname}', @work = '{profession}'");
 
                     connection.Execute(query);
                 }
