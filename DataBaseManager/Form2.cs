@@ -21,11 +21,7 @@ namespace DataBaseManager
         }
         public void AddDataTolist()
         {
-            List<string> dataList = data.DisplayData(table);
-            //for( int i = 0; i < sb.Length; i++)
-            //{
-            //    dataBox.Items.Add(sb[i].ToString());
-            //}
+            List<person> dataList = data.DisplayData(table);
             dataBox.DataSource = dataList;
 
 
@@ -37,14 +33,13 @@ namespace DataBaseManager
             InsertData form = new InsertData(data, table);
             Hide();
             form.Show();
-            Show();
             
         }
 
         private void dataBox_DoubleClick(object sender, EventArgs e)
         {
-            int index = (int)Char.GetNumericValue(dataBox.SelectedItem.ToString()[0]);// need to fix temporary solution
-            data.deleteItem(index, table);
+            int index = int.Parse(dataBox.SelectedItem.ToString().Split(':')[0]);
+            data.deleteItem(index);
             AddDataTolist();
         }
     }

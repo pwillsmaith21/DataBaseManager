@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
 
 namespace DataBaseManager
 {
@@ -16,6 +18,7 @@ namespace DataBaseManager
         public string table;
         public Form1()
         {
+
             this.table = string.Empty;
             InitializeComponent();
             AddtabletoList();
@@ -31,31 +34,11 @@ namespace DataBaseManager
         {
 
             this.table = tableOption.SelectedItem.ToString();
-            data.ConnectToDataBase();
             Form2 form = new Form2(data,table);
             Hide();
             form.Show();
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
